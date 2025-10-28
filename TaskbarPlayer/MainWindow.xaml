@@ -1,0 +1,22 @@
+﻿<Window x:Class="TaskbarPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TaskbarPlayer" Width="440" Height="248"
+        WindowStyle="None" AllowsTransparency="True" Background="#FF000000"
+        Topmost="True" ShowInTaskbar="False"
+        AllowDrop="True" Drop="OnFileDrop"
+        PreviewMouseLeftButtonDown="OnLeftDown"
+        PreviewMouseLeftButtonUp="OnLeftUp"
+        PreviewMouseMove="OnResizeMove"
+        MouseRightButtonUp="OnRightClick"
+        MouseDoubleClick="OnDoubleClick"
+        PreviewKeyDown="OnPreviewKeyDown"
+        Focusable="True">
+    <Grid>
+        <MediaElement x:Name="Player"
+                      LoadedBehavior="Manual"
+                      UnloadedBehavior="Manual"
+                      Stretch="Uniform"
+                      Volume="0.5" />
+    </Grid>
+</Window>
