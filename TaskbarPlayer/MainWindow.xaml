@@ -1,4 +1,4 @@
-﻿<Window x:Class="TaskbarPlayer.MainWindow"
+﻿<Window x:Class="TubePlayer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="TaskbarPlayer" Width="440" Height="248"
@@ -11,12 +11,25 @@
         MouseRightButtonUp="OnRightClick"
         MouseDoubleClick="OnDoubleClick"
         PreviewKeyDown="OnPreviewKeyDown"
-        Focusable="True">
+        Loaded="OnLoaded">
     <Grid>
         <MediaElement x:Name="Player"
                       LoadedBehavior="Manual"
                       UnloadedBehavior="Manual"
                       Stretch="Uniform"
                       Volume="0.5" />
+
+        <!-- 画面中央のステータスメッセージ用オーバーレイ -->
+        <Border x:Name="StatusOverlay"
+                Background="#80000000"
+                Visibility="Collapsed">
+            <TextBlock x:Name="StatusLabel"
+                       Foreground="White"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       Padding="12" />
+        </Border>
     </Grid>
 </Window>

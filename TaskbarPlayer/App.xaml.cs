@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace TaskbarPlayer
+namespace TubePlayer
 {
     public partial class App : Application
     {
